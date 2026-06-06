@@ -1,8 +1,8 @@
 #!/bin/sh
 # border_router egress-setup.
 #
-# Mirrors the NAT + border_egress RPDB blocks of
-# roles/wireguard/files/wireguard/postup.sh, WITHOUT WireGuard. Runs once as a
+# Mirrors the NAT + border_egress RPDB blocks of the former wireguard
+# postup.sh, WITHOUT WireGuard. Runs once as a
 # Kubernetes initContainer; the kernel state it installs (dummy0, RPDB table,
 # nft table) persists in the shared pod netns for the pod lifetime, so the
 # long-running frr-sidecar container sees it.
